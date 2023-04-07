@@ -52,8 +52,7 @@ is the frequency of sales amounts that are bucketed at each of the sales interva
 
 Here I look at boxplots where the x-axis is "Outlet Type" and the y-axis is the "Item Visibilty" and I am wanting to compare the Outlet Type 
 next to the Item Visibilty in the store. <br>
-Supermarket Type1, Supermarket2, Supermarket3 and Grocery Store are the four categories in the Outlet Type column. <br>
-There are some outliers in these boxplots, with some more extreme outliers in the Grocery Store boxplot. <br>
+
 Supermarket 1,2 and 3 have a similar distribution of data while the Grocery store seems to have a higher degree <br> 
 of item visibilty of their products compared to the other types. <br>
 
@@ -61,7 +60,7 @@ of item visibilty of their products compared to the other types. <br>
 During the Explanatory Data Analysis phase, I answered the following questions:
 
 1. Which Outlet Type has the most and least amount of sales?
-> It was found that the Grocery Store has the least, with an avergae of $500 in sales
+> It was found that the Grocery Store has the least, with an average of $500 in sales
 2. What is the distribution of Item Visibility?
 > Using a histogram, after viewing the distribution of Item Visibility for the producet, 
 > that there is a higher amount of visibile items were bucketed in the 0.07
@@ -77,8 +76,8 @@ During the Explanatory Data Analysis phase, I answered the following questions:
     - Tuned Decision Tree Regressor Model
 
 ## Models Evaluated & Results
+(Training & Testing Set):
 
-- Baseline Model, Linear Regression Model, Decision Tree Regressor Model, Tuned Decision Tree Regressor (Training & Testing Set):
 <p align = "left"> 
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/model_analysis.png">
 </p>
@@ -86,25 +85,24 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 
 
 - The Final Model Chosen was a `Tuned Decision Tree Model` with the max depth tuned to 5.
-- For the testing set on the model, `56.3%` of the variance in y was explained by x. 
-- The Mean Absolute Error was off by about `$31,998.94`.
-- The Mean Squared Error was `$2,044,264,641.83`.
-- The Root Mean Squared Error had a calculation of `$45,213.55`.
+- For the testing set on the model, `59.71%` of the variance in y was explained by x. 
+- The Mean Absolute Error was off by about `$743.53`.
+- The Root Mean Squared Error had a calculation of `$1062.25`.
 
 
 Refer to the metrics to describe how well the model would solve the business problem
 
 ### Recommendations:
 
-More of your own text here
+Overall, the best model is definitely the tuned Random Decision Tree Regressor Model. There was still some bias in the model, but by far it outperformed the linear regression model.
 
 
 ## Limitations & Next Steps
 
-More of your own text here
+From here, a business owner could use these insights to figure out the best method to get the most food sales for their business.
 
 
 ### For further information
 
 
-For any additional questions, please contact **email**
+For any additional questions, please contact Hannah Ploutz @ **hgploutz@gmail.com**
