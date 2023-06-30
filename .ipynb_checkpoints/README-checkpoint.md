@@ -96,6 +96,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 <p align = "center"> 
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/LinearRegressionAnalysis.png">
 </p>
+
 - Outlet_identifier_OUT027, Outlet Type Supermarket Type3 and Outlet Size Medium all had the greatest impact
 - Outlet_identifier_OUT027 has the coefficient of 581.879 which means that type of store had a great impact on food sales
 - Supermarket Type 3 had 581.879 has a coefficient of 581.879 which also means this has a great impact on higher food sales
@@ -105,6 +106,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 <p align = "center"> 
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/RandomForestFeatureAnalysis.png">
 </p>
+
 - The higher the MRP the more it was used to split the samples and predict the final grade
 - The Type of grocery store was predominantly the 0.0 value that was used to predict the final grade
 - The lower end of the Item_Visibility had a greater impact on predicting the final grade
@@ -115,6 +117,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 <p align = "center"> 
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageBar.png">
 </p>
+
 - Both SHAP and the Feature Importance visualizations display MRP as the most important feature
 - They both also share the similarity for the Grocery Store, and start to differ right after that
 - Shap shows the third most important being Supermarket Type 3 while the feature importance shows Item Visbility
@@ -123,6 +126,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 <p align = "center"> 
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
 </p>
+
 - The most important feature with this Shap dot chart is definitely Item_MRP
 - The Higher the value of the Item_MRP the higher in importance it is
 - The Grocery store type coming in second, with the lower value of the the Outlet Type being more impactful
