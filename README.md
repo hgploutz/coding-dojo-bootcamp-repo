@@ -133,6 +133,52 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 - The third most impactful feature would be Supermarket Type 3, where the higher values had a higher impact
 
 
+
+### High MRP Insight
+**Shap Force Plot**
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+</p>
+
+- The base value is 2,145
+- The SHAP value is 3,424.20
+- The features that are pushing the greatest and winning the prediction are:
+> - Outlet Type 0 and Item MRP = 266.2
+- The features that lost in making the prediction are:
+> - Item visibility of 0.005 and Outlet establishment year 
+
+**Lime Tabular Explanation** 
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+</p>
+
+- The predicted value was closer to the min of 58.46
+- The most impactful features was Outlet Type Grocery Store and Item MRP
+
+### High Visibility Insight
+**Shap Force Plot**
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+</p>
+
+- The base value is 2,145
+- The SHAP value is 361.28
+- The features that are pushing the greatest and winning the prediction are:
+> - Outlet Type Grocery Store 1
+- The features that lost in making the prediction are:
+> - Outlet Establishment Year 1985
+
+
+**Lime Tabular Explanation** 
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+</p>
+
+- The predicted value was closer to the min of 48.25
+- The most impactful features to the positive raiting was:
+> - Item MRP, Year of 1985, Item Type Others and Hard Drinks
+
+
 ### Recommendations:
 
 Overall, the best model is definitely the tuned Random Decision Tree Regressor Model. There was still some bias in the model, but by far it outperformed the linear regression model.
