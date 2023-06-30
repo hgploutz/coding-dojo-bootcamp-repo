@@ -31,6 +31,25 @@ There are 8523 rows, and 12 columns.
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/bar_chart_viz2.png">
 </p>
 
+### LinearRegression Coefficients Plot
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/LinearRegressionAnalysis.png">
+</p>
+- Outlet_identifier_OUT027, Outlet Type Supermarket Type3 and Outlet Size Medium all had the greatest impact
+- Outlet_identifier_OUT027 has the coefficient of 581.879 which means that type of store had a great impact on food sales
+- Supermarket Type 3 had 581.879 has a coefficient of 581.879 which also means this has a great impact on higher food sales
+- Outlet Size Medium has a coefficient of 409.869 which means that if the outlet is categorized as a size medium, it has a high impact as well
+
+### Tree-Based Models Feature Importances Plot
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/RandomForestFeatureAnalysis.png">
+</p>
+- The higher the MRP the more it was used to split the samples and predict the final grade
+- The Type of grocery store was predominantly the 0.0 value that was used to predict the final grade
+- The lower end of the Item_Visibility had a greater impact on predicting the final grade
+- Item weight was fairly evenly distributed, with a spike right in the middle around 12.5
+- This indicates that if the year of the Outlet was established was 195, that had the greatest impact on sales
+
 ### Exploratory Data Analysis
 During the Exploratory Data Analysis phase the following were used to visualize the data 
 - Histogram
