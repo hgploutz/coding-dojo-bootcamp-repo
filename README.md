@@ -137,7 +137,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 ### High MRP Insight
 **Shap Force Plot**
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighMRPShap.png">
 </p>
 
 - The base value is 2,145
@@ -149,7 +149,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 
 **Lime Tabular Explanation** 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighMRPlime.png">
 </p>
 
 - The predicted value was closer to the min of 58.46
@@ -158,7 +158,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 ### High Visibility Insight
 **Shap Force Plot**
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighVisShap.png">
 </p>
 
 - The base value is 2,145
@@ -171,7 +171,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 
 **Lime Tabular Explanation** 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighVisLime.png">
 </p>
 
 - The predicted value was closer to the min of 48.25
