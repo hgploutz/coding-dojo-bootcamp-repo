@@ -31,24 +31,6 @@ There are 8523 rows, and 12 columns.
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/bar_chart_viz2.png">
 </p>
 
-### LinearRegression Coefficients Plot
-<p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/LinearRegressionAnalysis.png">
-</p>
-- Outlet_identifier_OUT027, Outlet Type Supermarket Type3 and Outlet Size Medium all had the greatest impact
-- Outlet_identifier_OUT027 has the coefficient of 581.879 which means that type of store had a great impact on food sales
-- Supermarket Type 3 had 581.879 has a coefficient of 581.879 which also means this has a great impact on higher food sales
-- Outlet Size Medium has a coefficient of 409.869 which means that if the outlet is categorized as a size medium, it has a high impact as well
-
-### Tree-Based Models Feature Importances Plot
-<p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/RandomForestFeatureAnalysis.png">
-</p>
-- The higher the MRP the more it was used to split the samples and predict the final grade
-- The Type of grocery store was predominantly the 0.0 value that was used to predict the final grade
-- The lower end of the Item_Visibility had a greater impact on predicting the final grade
-- Item weight was fairly evenly distributed, with a spike right in the middle around 12.5
-- This indicates that if the year of the Outlet was established was 195, that had the greatest impact on sales
 
 ### Exploratory Data Analysis
 During the Exploratory Data Analysis phase the following were used to visualize the data 
@@ -107,6 +89,44 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 - For the testing set on the model, `59.71%` of the variance in y was explained by x. 
 - The Mean Absolute Error was off by about `$743.53`.
 - The Root Mean Squared Error had a calculation of `$1062.25`.
+
+## Model Analysis Revisited 
+
+### LinearRegression Coefficients Plot
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/LinearRegressionAnalysis.png">
+</p>
+- Outlet_identifier_OUT027, Outlet Type Supermarket Type3 and Outlet Size Medium all had the greatest impact
+- Outlet_identifier_OUT027 has the coefficient of 581.879 which means that type of store had a great impact on food sales
+- Supermarket Type 3 had 581.879 has a coefficient of 581.879 which also means this has a great impact on higher food sales
+- Outlet Size Medium has a coefficient of 409.869 which means that if the outlet is categorized as a size medium, it has a high impact as well
+
+### Tree-Based Models Feature Importances Plot
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/RandomForestFeatureAnalysis.png">
+</p>
+- The higher the MRP the more it was used to split the samples and predict the final grade
+- The Type of grocery store was predominantly the 0.0 value that was used to predict the final grade
+- The lower end of the Item_Visibility had a greater impact on predicting the final grade
+- Item weight was fairly evenly distributed, with a spike right in the middle around 12.5
+- This indicates that if the year of the Outlet was established was 195, that had the greatest impact on sales
+
+### Summary Plot - Bar Version
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageBar.png">
+</p>
+- Both SHAP and the Feature Importance visualizations display MRP as the most important feature
+- They both also share the similarity for the Grocery Store, and start to differ right after that
+- Shap shows the third most important being Supermarket Type 3 while the feature importance shows Item Visbility
+
+### Summary plot - Dot Version
+<p align = "center"> 
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+</p>
+- The most important feature with this Shap dot chart is definitely Item_MRP
+- The Higher the value of the Item_MRP the higher in importance it is
+- The Grocery store type coming in second, with the lower value of the the Outlet Type being more impactful
+- The third most impactful feature would be Supermarket Type 3, where the higher values had a higher impact
 
 
 ### Recommendations:
