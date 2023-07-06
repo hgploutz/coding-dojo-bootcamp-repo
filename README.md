@@ -76,7 +76,11 @@ During the Explanatory Data Analysis phase, I answered the following questions:
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/LinearRegressionAnalysis.png">
 </p>
 
-Think of our sales like a recipe. Certain ingredients will make our dish better, and some might not. In our case, the 'ingredients' are different characteristics of our outlets. We found that when an outlet has the ID "Outlet_identifier_OUT027" or if it's a "Supermarket Type 3," our sales tend to be higher. It's like adding extra cheese to a pizza - it makes it better! We also noticed that when an outlet is medium-sized, sales tend to increase as well. It's as if having just the right amount of salt makes our dish tastier. But not all 'ingredients' make our sales recipe better. We noticed that when our outlet is a grocery store, sales tend to go down. It's like adding too much vinegar to our dish - it doesn't really help. Remember, this is what we found based on our current data. If things change in the future, we might have to tweak our recipe.
+In our analysis, different factors about our outlets can influence our sales. For instance, if an outlet has the ID "Outlet_identifier_OUT027" or if it's classified as a "Supermarket Type 3," we tend to see higher sales. This suggests that these factors positively contribute to our business success.
+
+Likewise, outlets of medium size tend to see increased sales, pointing to a favorable balance between having a broad range of products and maintaining manageable overhead costs.
+
+However, not all factors are beneficial. When our outlet is classified as a grocery store, we tend to see a decrease in sales. This could be due to a variety of factors, such as lower foot traffic or more limited product ranges compared to larger outlets. Please keep in mind that these observations are based on our current data and trends might change over time.
 
 ### Tree-Based Models Feature Importances Plot
 <p align = "center"> 
