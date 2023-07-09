@@ -24,10 +24,6 @@ There are 8523 rows, and 12 columns.
 - Bar chart visualizations were used to determine how to handle some "missing" data in the Outlet_Size column
 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/bar_chart_viz1.png">
-</p>
-
-<p align = "center"> 
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/bar_chart_viz2.png">
 </p>
 
@@ -105,8 +101,13 @@ Both our SHAP and Feature Importance charts show us that the price tag (Item_MRP
 
 Our SHAP dot chart tells us a few things. First, the price tag (Item_MRP) of an item can really change our sales predictions for a single item. The more expensive the item, the bigger its influence on the prediction. Second, whether an outlet is a Grocery Store also makes a big difference. But in this case, being less of a 'Grocery Store' type seems to change our predictions more.
 
-Lastly, if an outlet is a 'Supermarket Type 3', this too can shake things up. Again, being more of a 'Supermarket Type 3' tends to alter our sales predictions more. Remember, these factors don't always matter this much for every prediction, just the particular ones we looked at.
+Lastly, if an outlet is a 'Supermarket Type 3', this too can shake things up. Again, being more of a 'Supermarket Type 3' tends to alter our sales predictions more. 
 
+## High MRP & High Visibility Analysis
+
+- The reason I chose High MRP is because it seems to be very impactful on the data and I wanted to explore it more. The more an item MRP is, theoretically, the lower the food sales could be depending on the situation. Like, if there is a store with the average cost of bread is 2 dollars, but there is a bread that costs 15 dollars, could that be lowering the food sales? I wanted to explore that thought more
+
+- The reason I chose High Visibility is it seems like a fairly straightforward thought - if the item is easier to see, then it should be driving up sales right?
 
 ### High MRP Insight
 **Shap Force Plot**
@@ -114,16 +115,16 @@ Lastly, if an outlet is a 'Supermarket Type 3', this too can shake things up. Ag
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighMRPShap.png">
 </p>
 
-We start with a baseline sales prediction of 2,145. Certain characteristics of our outlets and items can adjust this prediction. For example, if the Outlet Type is 0 and the item has a high price (Item MRP), it increases our sales prediction by 266.2, bringing the prediction to 3,424.2.
+We start with a baseline sales prediction of 2,145, with the actual prediction of 3424.20. Certain characteristics of our outlets and items can adjust this prediction. For example, if the Outlet Type is 0 and the item has a high price (Item MRP), it increases our sales prediction to a higher value.
 
-On the other hand, some features reduce our sales prediction. If an item isn't very visible or if the outlet has been established for a long time, our prediction for sales tends to go down. It's important to remember that this doesn't mean these features are "losing"; they're just contributing in a way that decreases the final sales prediction.
+On the other hand, some features reduce our sales prediction. If an item isn't very visible or if the outlet has been established for a long time, our prediction for sales tends to go down. 
 
 **Lime Tabular Explanation** 
 <p align = "center"> 
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighMRPlime.png">
 </p>
 
-Our model predicted that the sales would be near the lowest possible value, which is 66.06 in this case. To understand why the model made this prediction, we used a tool called LIME. For this particular prediction, it turns out that the item's price (Item MRP) and whether the outlet was a Grocery Store were the deciding factors. Keep in mind, these factors might not always be the key influencers for other predictions, but they were crucial for this one.
+Our model predicted value for high MRP is 3424.20. To understand why the model made this prediction, we used a tool called LIME. For this particular prediction, it turns out that the item's price (Item MRP) of over 181.39 and whether the outlet was a Grocery Store were the deciding factors. If the item was sold in a Grocery store, it drove the prediction up by about 2,000 and if the item had an MRP of about 200, then it also drove up the prediction by about 1,600. In the opposite direction, if the item was sold at a Supermarket, then it would drive the prediction down by about 400.
 
 ### High Visibility Insight
 **Shap Force Plot**
@@ -131,11 +132,11 @@ Our model predicted that the sales would be near the lowest possible value, whic
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighVisShap.png">
 </p>
 
-We start by predicting that sales will be around 2,145. Then, we adjust this prediction based on specific characteristics of our outlets and items.
+We start by a baseline of 2,145. Then, we adjust this prediction based on specific characteristics of our outlets and items and wind up with a prediction of 361.28. That's quite a decrease!!
 
-For example, if an outlet is a type 1 Grocery Store, we would expect our sales to go up, increasing our prediction to 361.28. This isn't about "winning" or "losing," but about how this particular type of store tends to increase sales.
+The reason it decreased so much was that if the type was "Grocery Store" then it would drive the predicition sharply downwards by about 1600. 
 
-On the flip side, if an outlet was established in 1985, our sales prediction goes down a bit. Again, it's not that this feature is "losing," it just tends to decrease our prediction of what sales will be.
+On the flip side, if an outlet was established in 1985, our sales prediction increases, to up the predicition by about 150.
 
 
 **Lime Tabular Explanation** 
@@ -143,9 +144,13 @@ On the flip side, if an outlet was established in 1985, our sales prediction goe
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighVisLime.png">
 </p>
 
-Our model guessed that sales would be near the lowest we've seen, around 61.99. To understand why the model made this guess, we used a tool called LIME.
+Our model predicted value for high Visibility is 361.28. To understand why the model made this guess, we used a tool called LIME.
 
-In this specific case, the factors that made the most difference were the type of outlet (if it was a Grocery Store), the item's price, if the store was established in 1985, and if the items were classified as 'Others' or 'Hard Drinks'. These factors were particularly influential in leading the model to its low sales prediction. But remember, these factors might not be as influential in other predictions. They were just key for this one.
+In this specific case, the factors that made the most difference were that the type was Grocery Store, Supermarket, and Item MRP. 
+
+- Just selling the item at a Grocery store significantly decreased the prediction by about 2,000
+- If the item was sold at a Supermarket, then it would decrease the prediction by just over 400
+- If the item had an MRP of a little over 140, then it would increase the prediction by 403
 
 ## Limitations & Next Steps
 
