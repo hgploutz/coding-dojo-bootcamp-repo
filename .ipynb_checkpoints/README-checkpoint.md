@@ -15,7 +15,7 @@ There are 8523 rows, and 12 columns.
 ### Data Dictionary:
 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/data_dictionary%20(1).png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/data_dictionary%20(1).png">
 </p>
 
 ## During the initial cleaning portion for this project the following actions were taken:
@@ -24,7 +24,7 @@ There are 8523 rows, and 12 columns.
 - Bar chart visualizations were used to determine how to handle some "missing" data in the Outlet_Size column
 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/bar_chart_viz2.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/bar_chart_viz2.png">
 </p>
 
 
@@ -35,7 +35,7 @@ During the Exploratory Data Analysis phase the following were used to visualize 
 - Heatmap
 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/exploratory1.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/exploratory1.png">
 </p>
 
 In the above Histogram, I used the Item_Outlet_Sales column from the dataframe to create a histogram that looks at <br>
@@ -44,7 +44,7 @@ is the frequency of sales amounts that are bucketed at each of the sales interva
 
 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/exploratoryviz2.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/exploratoryviz2.png">
 </p>
 
 Here I look at boxplots where the x-axis is "Outlet Type" and the y-axis is the "Item Visibilty" and I am wanting to compare the Outlet Type 
@@ -69,7 +69,7 @@ During the Explanatory Data Analysis phase, I answered the following questions:
 
 ### LinearRegression Coefficients Plot
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/LinearRegressionAnalysis.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/LinearRegressionAnalysis.png">
 </p>
 
 In our analysis, different factors about our outlets can influence our sales. For instance, if an outlet has the ID "Outlet_identifier_OUT027" or if it's classified as a "Supermarket Type 3," we tend to see higher sales. This suggests that these factors positively contribute to our business success.
@@ -80,7 +80,7 @@ However, not all factors are beneficial. When our outlet is classified as a groc
 
 ### Tree-Based Models Feature Importances Plot
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/RandomForestFeatureAnalysis.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/RandomForestFeatureAnalysis.png">
 </p>
 
 Our analysis shows that the price (MRP) of an item has a major role in predicting its final grade. The higher the price, the better we can predict the grade. When our outlets are a specific type – the 'Grocery Store' type – we seem to predict the final grade more accurately. So, the type of store plays a critical role in our predictions. Interestingly, items that aren't as visible have a greater impact on the final grade. So, visibility is not always key. The weight of an item doesn't tip our predictions too much one way or the other, but there's a slight increase in predictability when the weight is around the middle (12.5).
@@ -89,14 +89,14 @@ Finally, the establishment year of our outlets does matter. Those established ar
 
 ### Summary Plot - Bar Version
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageBar.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/ShapImageBar.png">
 </p>
 
 Both our SHAP and Feature Importance charts show us that the price tag (Item_MRP) of an item is really important. Also, whether an outlet is a Grocery Store can change the sales a lot. However, there's a difference when it comes to the third most influential factor. The SHAP chart points to Supermarket Type 3, while the Feature Importance chart tells us that how visible an item is plays a big role. So, depending on the perspective, the third key factor varies.
 
 ### Summary plot - Dot Version
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/ShapImageDot.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/ShapImageDot.png">
 </p>
 
 Our SHAP dot chart tells us a few things. First, the price tag (Item_MRP) of an item can really change our sales predictions for a single item. The more expensive the item, the bigger its influence on the prediction. Second, whether an outlet is a Grocery Store also makes a big difference. But in this case, being less of a 'Grocery Store' type seems to change our predictions more.
@@ -112,7 +112,7 @@ Lastly, if an outlet is a 'Supermarket Type 3', this too can shake things up. Ag
 ### High MRP Insight
 **Shap Force Plot**
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighMRPShap.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/HighMRPShap.png">
 </p>
 
 We start with a baseline sales prediction of 2,145, with the actual prediction of 3424.20. Certain characteristics of our outlets and items can adjust this prediction. For example, if the Outlet Type is 0 and the item has a high price (Item MRP), it increases our sales prediction to a higher value.
@@ -121,7 +121,7 @@ On the other hand, some features reduce our sales prediction. If an item isn't v
 
 **Lime Tabular Explanation** 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighMRPlime.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/HighMRPlime.png">
 </p>
 
 Our model predicted value for high MRP is 3424.20. To understand why the model made this prediction, we used a tool called LIME. For this particular prediction, it turns out that the item's price (Item MRP) of over 181.39 and whether the outlet was a Grocery Store were the deciding factors. If the item was sold in a Grocery store, it drove the prediction up by about 2,000 and if the item had an MRP of about 200, then it also drove up the prediction by about 1,600. In the opposite direction, if the item was sold at a Supermarket, then it would drive the prediction down by about 400.
@@ -129,7 +129,7 @@ Our model predicted value for high MRP is 3424.20. To understand why the model m
 ### High Visibility Insight
 **Shap Force Plot**
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighVisShap.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/HighVisShap.png">
 </p>
 
 We start by a baseline of 2,145. Then, we adjust this prediction based on specific characteristics of our outlets and items and wind up with a prediction of 361.28. That's quite a decrease!!
@@ -141,7 +141,7 @@ On the flip side, if an outlet was established in 1985, our sales prediction inc
 
 **Lime Tabular Explanation** 
 <p align = "center"> 
-  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/HighVisLime.png">
+  <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/HighVisLime.png">
 </p>
 
 Our model predicted value for high Visibility is 361.28. To understand why the model made this guess, we used a tool called LIME.
