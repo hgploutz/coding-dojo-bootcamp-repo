@@ -124,7 +124,7 @@ On the other hand, some features reduce our sales prediction. If an item isn't v
   <img src = "https://github.com/hgploutz/food-sales-predictions/blob/main/Data/HighMRPlime.png">
 </p>
 
-Our model predicted value for high MRP is 3424.20. To understand why the model made this prediction, we used a tool called LIME. For this particular prediction, it turns out that the item's price (Item MRP) of over 181.39 and whether the outlet was a Grocery Store were the deciding factors. If the item was sold in a Grocery store, it drove the prediction up by about 2,000 and if the item had an MRP of about 200, then it also drove up the prediction by about 1,600. In the opposite direction, if the item was sold at a Supermarket, then it would drive the prediction down by about 400.
+Our model predicted value for high MRP is 3424.20. To understand why the model made this prediction, we used a tool called LIME. For this particular prediction, it turns out that the item's price (Item MRP) of over 181.39 and the fact that it wasn't a Grocery Store were the deciding factors. If the item was not sold in a Grocery store, it drove the prediction up by about 2,000 and if the item had an MRP of about 200, then it also drove up the prediction by about 1,600. In the opposite direction, if the item was not sold at a Supermarket, then it would drive the sales prediction down by about 400.
 
 ### High Visibility Insight
 **Shap Force Plot**
@@ -149,7 +149,7 @@ Our model predicted value for high Visibility is 361.28. To understand why the m
 In this specific case, the factors that made the most difference were that the type was Grocery Store, Supermarket, and Item MRP. 
 
 - Just selling the item at a Grocery store significantly decreased the prediction by about 2,000
-- If the item was sold at a Supermarket, then it would decrease the prediction by just over 400
+- If the item was not sold at a Supermarket, then it would decrease the prediction by just over 400
 - If the item had an MRP of a little over 140, then it would increase the prediction by 403
 
 ## Limitations & Next Steps
